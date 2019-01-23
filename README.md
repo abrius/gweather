@@ -12,4 +12,4 @@ Screenshot (terminal output)<br />
 <img src=https://github.com/abrius/gweather/blob/master/screenshot.png>
 
 Use it in Conky:<br />
-${execi 360 python2 gweather.py}
+${execi 360 python gweather.py} or ${execi 360 python2 gweather.py}
