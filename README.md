@@ -9,4 +9,4 @@ python gweather.py or python2 gweather.py
 
 
 Screenshot (terminal output)<br /> 
-<img src=https://github.com/abrius/gweather/blob/master/gweather.png>
+<img src=https://github.com/abrius/gweather/blob/master/screenshot.png>
