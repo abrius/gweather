@@ -1,5 +1,5 @@
-# gweather
-Google Weather
+# Google Weather
+(Google Weather for python 2)
 
-Clone:<br/>
+Download source:<br/>
 git clone  https://github.com/abrius/gweather.git
