@@ -21,7 +21,7 @@ condition		= re.findall('<span class="vk_gy vk_sh" id="wob_dc">(.*?)</span></div
 
 updated 		= updated[0] 
 temperature		= temperature[0]
-precipitation 	       = precipitation[0]
+precipitation 	        = precipitation[0]
 humidity 		= humidity[0]
 wind 			= wind[0]
 condition		= condition[0]
