@@ -4,9 +4,9 @@
 Download source:<br />
 git clone  https://github.com/abrius/gweather.git
 
-Run:
-python2 gweather.py / for python2 <br />
-python  gweather.py / for python3
+Run: <br />
+python gweather.py or python2 gweather.py
+
 
 Screenshot (terminal output)<br /> 
 <img src=https://github.com/abrius/gweather/blob/master/gweather.png>
