@@ -23,21 +23,13 @@ humidity		= re.findall('<span id="wob_hm">(.*?)</span>',array, re.U)
 wind			= re.findall('<span class="wob_t" id="wob_ws">(.*?)</span>',array, re.U) 
 condition		= re.findall('<span class="vk_gy vk_sh" id="wob_dc">(.*?)</span></div></span>',array, re.U) 
 
-# data from array
-updated 		= updated[0] 
-temperature		= temperature[0]
-precipitation 	        = precipitation[0]
-humidity 		= humidity[0]
-wind 			= wind[0]
-condition		= condition[0]
-
 # output
 print ("Google weather")
 print ("--------------")
 print ("City:          "+city)
-print ("Condition:     "+condition)
-print ("Temperature:   "+temperature)
-print ("Wind:          "+wind)
-print ("Humidity:      "+humidity)
-print ("Precipitation: "+precipitation)
-print ("Updated:       "+updated)
+print ("Condition:     "+condition[0])
+print ("Temperature:   "+temperature[0])
+print ("Wind:          "+wind[0])
+print ("Humidity:      "+humidity[0])
+print ("Precipitation: "+precipitation[0])
+print ("Updated:       "+updated[0])
