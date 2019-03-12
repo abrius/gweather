@@ -13,5 +13,6 @@ gweather3.py for python3<br>
 <img src=https://github.com/abrius/gweather/blob/master/terminal.png>
 
 <b>Use it in Conky:</b><br />
-${execi 360 python gweather3.py} or ${execi 360 python2 gweather2.py} <br />
+${execi 360 python gweather3.py}<br>
+${execi 360 python2 gweather2.py} <br />
 <img src=https://github.com/abrius/gweather/blob/master/conky.png>
