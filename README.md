@@ -13,5 +13,5 @@ Screenshot (terminal output)<br />
 <img src=https://github.com/abrius/gweather/blob/master/terminal.png>
 
 Use it in Conky:<br />
-${execi 360 python gweather.py} or ${execi 360 python2 gweather.py} <br />
+${execi 360 python gweather3.py} or ${execi 360 python2 gweather2.py} <br />
 <img src=https://github.com/abrius/gweather/blob/master/conky.png>
