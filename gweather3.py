@@ -4,7 +4,7 @@
 import urllib.request
 import re
 
-# Your agent, can check here: http://whatsmyua.com/ 
+# Your agent, can check here: http://whatsmyua.com/  
 # (without agent google detect app or programing language and does not show source)
 city 	= "Pekin" 
 agent 	= "Mozilla/5.0 (X11; Linux i686; rv:64.0) Gecko/20100101 Firefox/64.0"
