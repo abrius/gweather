@@ -7,7 +7,7 @@ import re
 # Your agent, can check here: http://whatsmyua.com/ 
 # (without agent google detect app or programing language and does not show source)
 city 	= "Pekin" 
-agent 	= "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:48.0) Gecko/20100101 Firefox/48.0"
+agent 	= "Mozilla/5.0 (X11; Linux i686; rv:64.0) Gecko/20100101 Firefox/64.0"
 source 	= urllib.request.Request('https://www.google.com/search?q=weather+'+city+'', headers={'User-Agent':agent})
 array 	= urllib.request.urlopen(source).read().decode('utf-8')
 
