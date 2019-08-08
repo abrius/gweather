@@ -148,7 +148,7 @@ class MyWindow(Gtk.Window):
         subprocess.call(['sed','-i','/.*'+remove_item+'.*/d',cfg_file])
         combo.remove_all()
         lines_list = open(cfg_file).read().splitlines()
-        lines_list = list(filter(None, lines_list)) # fastest  
+        lines_list = list(filter(None, lines_list)) 
         
         for t in lines_list:            
             combo.append_text(t)
