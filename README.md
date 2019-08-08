@@ -5,7 +5,10 @@
 git clone  https://github.com/abrius/gweather.git
 
 <b>Screenshot</b> (terminal output)<br /> 
-<img src=https://github.com/abrius/gweather/blob/master/terminal.png>
+<img src=https://github.com/abrius/gweather/blob/master/terminal.png> <br />
+
+<b>Screenshot</b> (Gtk3 output)<br />
+<img src=https://github.com/abrius/gweather/blob/master/gtk3.png> <br />
 
 <b>Use it in Conky:</b><br />
 ${execi 360 python gweather3.py}<br>
