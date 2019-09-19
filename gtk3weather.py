@@ -114,7 +114,7 @@ class MyWindow(Gtk.Window):
         getcitycombo = combo.get_active_text()
         getcitycombo = getcitycombo.replace(' ','+')
 
-        agent  = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 OPR/62.0.3331.118"
+        agent  = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36 OPR/63.0.3368.88"
         source = urllib.request.Request('https://www.google.com/search?q=weather+'+getcitycombo+'', headers={'User-Agent':agent})
         array  = urllib.request.urlopen(source).read().decode('utf-8')
 
