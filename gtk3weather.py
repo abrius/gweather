@@ -17,7 +17,7 @@ class MyWindow(Gtk.Window):
         self.init_ui()
 
     def init_ui(self):    
-
+        lab  = Gtk.Label()
         grid = Gtk.Grid()
         grid.set_column_spacing(0)
         self.add(grid)            
@@ -48,49 +48,63 @@ class MyWindow(Gtk.Window):
         grid.attach(button3, 2, 1, 1, 1)
         button3.connect("clicked", self.on_remove, combo)
 
-        self.label_1 = Gtk.Label(" City")
+        self.label_1 = Gtk.Label(label=" City")
         grid.attach(self.label_1, 0, 2, 1, 1)
-        self.label_1.set_alignment(0,0);
-        self.label_2 = Gtk.Label(" Condition")
+        self.label_1.set_xalign(0);
+        self.label_1.set_yalign(0);
+        self.label_2 = Gtk.Label(label=" Condition")
         grid.attach(self.label_2, 0, 3, 1, 1)
-        self.label_2.set_alignment(0,0);
-        self.label_3 = Gtk.Label(" Temperature")
+        self.label_2.set_xalign(0);
+        self.label_2.set_yalign(0);
+        self.label_3 = Gtk.Label(label=" Temperature")
         grid.attach(self.label_3, 0, 4, 1, 1)
-        self.label_3.set_alignment(0,0);
-        self.label_4 = Gtk.Label(" Wind")
+        self.label_3.set_xalign(0);
+        self.label_3.set_yalign(0);
+        self.label_4 = Gtk.Label(label=" Wind")
         grid.attach(self.label_4, 0, 5, 1, 1)
-        self.label_4.set_alignment(0,0);
-        self.label_5 = Gtk.Label(" Precipitation")
+        self.label_4.set_xalign(0);
+        self.label_4.set_yalign(0);
+        self.label_5 = Gtk.Label(label=" Precipitation")
         grid.attach(self.label_5, 0, 6, 1, 1)
-        self.label_5.set_alignment(0,0);
-        self.label_6 = Gtk.Label(" Humidity")
+        self.label_5.set_xalign(0);
+        self.label_5.set_yalign(0);
+        self.label_6 = Gtk.Label(label=" Humidity")
         grid.attach(self.label_6, 0, 7, 1, 1)
-        self.label_6.set_alignment(0,0);
-        self.label_7 = Gtk.Label(" Updated")
+        self.label_6.set_xalign(0);
+        self.label_6.set_yalign(0);
+        self.label_7 = Gtk.Label(label=" Updated")
         grid.attach(self.label_7, 0, 8, 1, 1)
-        self.label_7.set_alignment(0,0);
+        self.label_7.set_xalign(0);
+        self.label_7.set_yalign(0);
 
-        self.label_8 = Gtk.Label("")
+        self.label_8 = Gtk.Label(label="")
         grid.attach(self.label_8, 1, 2, 2, 1)
-        self.label_8.set_alignment(0,0);
-        self.label_9 = Gtk.Label("")
+        self.label_8.set_xalign(0);
+        self.label_8.set_yalign(0);
+        self.label_9 = Gtk.Label(label="")
         grid.attach(self.label_9, 1, 3, 2, 1)
-        self.label_9.set_alignment(0,0);
-        self.label_10 = Gtk.Label("")
+        self.label_9.set_xalign(0);
+        self.label_9.set_yalign(0);
+        self.label_10 = Gtk.Label(label="")
         grid.attach(self.label_10, 1, 4, 2, 1)
-        self.label_10.set_alignment(0,0);
-        self.label_11 = Gtk.Label("")
+        self.label_10.set_xalign(0);
+        self.label_10.set_yalign(0);
+        self.label_11 = Gtk.Label(label="")
         grid.attach(self.label_11, 1, 5, 2, 1)
-        self.label_11.set_alignment(0,0);
-        self.label_12 = Gtk.Label("")
+        self.label_11.set_xalign(0);
+        self.label_11.set_yalign(0);
+        self.label_12 = Gtk.Label(label="")
         grid.attach(self.label_12, 1, 6, 2, 1)
-        self.label_12.set_alignment(0,0);
-        self.label_13 = Gtk.Label("")
+        self.label_12.set_xalign(0);
+        self.label_12.set_yalign(0);
+        self.label_13 = Gtk.Label(label="")
         grid.attach(self.label_13, 1, 7, 2, 1)
-        self.label_13.set_alignment(0,0);
-        self.label_14 = Gtk.Label("")
+        self.label_13.set_xalign(0);
+        self.label_13.set_yalign(0);
+        self.label_14 = Gtk.Label(label="")
         grid.attach(self.label_14, 1, 8, 2, 1)
-        self.label_14.set_alignment(0,0);
+        self.label_14.set_xalign(0);
+        self.label_14.set_yalign(0);
 
         self.set_border_width(5)
         self.set_title("Google Weather")
@@ -100,7 +114,7 @@ class MyWindow(Gtk.Window):
         getcitycombo = combo.get_active_text()
         getcitycombo = getcitycombo.replace(' ','+')
 
-        agent  = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 OPR/62.0.3331.116"
+        agent  = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 OPR/62.0.3331.118"
         source = urllib.request.Request('https://www.google.com/search?q=weather+'+getcitycombo+'', headers={'User-Agent':agent})
         array  = urllib.request.urlopen(source).read().decode('utf-8')
 
@@ -148,7 +162,7 @@ class MyWindow(Gtk.Window):
         subprocess.call(['sed','-i','/.*'+remove_item+'.*/d',cfg_file])
         combo.remove_all()
         lines_list = open(cfg_file).read().splitlines()
-        lines_list = list(filter(None, lines_list)) 
+        lines_list = list(filter(None, lines_list)) # fastest  
         
         for t in lines_list:            
             combo.append_text(t)
@@ -157,4 +171,3 @@ class MyWindow(Gtk.Window):
 win = MyWindow()
 win.show_all()
 Gtk.main()
-
