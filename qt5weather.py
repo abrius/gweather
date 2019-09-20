@@ -87,7 +87,6 @@ class Example(QMainWindow):
     def on_show(self):
 
         combo_value = self.combo.currentText()    
-
         agent  = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36 OPR/63.0.3368.88"
         source = urllib.request.Request('https://www.google.com/search?q=weather+'+combo_value+'', headers={'User-Agent':agent})
         array  = urllib.request.urlopen(source).read().decode('utf-8')
