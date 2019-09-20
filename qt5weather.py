@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+import os
 import sys
 import urllib.request
 import re
 import subprocess
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QComboBox, QPushButton, QLineEdit
 
-cfg_file = ".gweather.cfg" # create config file with your city list
+cfg_file = "cities.txt" # create config file with your city list
 
 class Example(QMainWindow):
     
@@ -14,8 +15,12 @@ class Example(QMainWindow):
         super().__init__()
         
         self.combo = QComboBox(self)
-        lines_list = open(cfg_file).read().splitlines()
-        lines_list = list(filter(None, lines_list))
+        
+        if os.path.exists(cfg_file):
+            lines_list = open(cfg_file).read().splitlines()
+            lines_list = list(filter(None, lines_list))
+        else:
+            lines_list = open(cfg_file, "w+")
 
         for t in lines_list:
             self.combo.addItem(t)
