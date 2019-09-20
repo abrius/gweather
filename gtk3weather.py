@@ -8,7 +8,7 @@ import urllib.request
 import re
 import subprocess
 
-cfg_file = ".gweather.cfg" # create config file with your city list
+cfg_file = ".gweather.cfg" # create config file with your city list 
 
 class MyWindow(Gtk.Window):
 
