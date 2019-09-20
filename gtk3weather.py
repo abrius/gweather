@@ -29,8 +29,11 @@ class MyWindow(Gtk.Window):
         combo = Gtk.ComboBoxText()
         grid.attach(combo, 0, 1, 1, 1)
 
-        lines_list = open(cfg_file).read().splitlines()
-        lines_list = list(filter(None, lines_list))
+        if os.path.exists(cfg_file):
+            lines_list = open(cfg_file).read().splitlines()
+            lines_list = list(filter(None, lines_list))
+        else:
+            lines_list = open(cfg_file, "w+")
 
         for t in lines_list:
             combo.append_text(t)
