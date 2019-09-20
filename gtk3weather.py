@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+import os
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
@@ -8,7 +9,7 @@ import urllib.request
 import re
 import subprocess
 
-cfg_file = ".gweather.cfg" # create config file with your city list
+cfg_file = "cities.txt" # create config file with your city list
 
 class MyWindow(Gtk.Window):
 
