@@ -4,6 +4,9 @@
 <b>Download source:</b><br />
 git clone  https://github.com/abrius/gweather.git
 
+<b>Screenshot</b> (Qt5 output)<br />
+<img src=https://github.com/abrius/gweather/blob/master/qt5.png> <br />
+
 <b>Screenshot</b> (Gtk3 output)<br />
 <img src=https://github.com/abrius/gweather/blob/master/gtk3.png> <br />
 
