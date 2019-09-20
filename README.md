@@ -1,5 +1,5 @@
 # Google Weather
-(Google Weather for python 2 and python 3)
+(Google Weather for python 2 and python 3 with Gtk3 and QT5)
 
 <b>Download source:</b><br />
 git clone  https://github.com/abrius/gweather.git
