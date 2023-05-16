@@ -98,12 +98,12 @@ class Example(QMainWindow):
         array  = urllib.request.urlopen(source).read().decode('utf-8')
 
         # find and cut only needed weather data
-        updated         = re.findall('<div class="vk_gy vk_sh" id="wob_dts">(.*?)</div>',array, re.U)
-        temperature     = re.findall('<span class="wob_t" id="wob_tm" style="display:inline">(.*?)</span>',array, re.U) 
+        updated         = re.findall('<div class="wob_dts" id="wob_dts">(.*?),',array, re.U)
+        temperature     = re.findall('id="wob_tm" style="display:inline">(.*?)</span>',array, re.U) 
         precipitation   = re.findall('<span id="wob_pp">(.*?)</span>',array, re.U) 
         humidity        = re.findall('<span id="wob_hm">(.*?)</span>',array, re.U) 
         wind            = re.findall('<span class="wob_t" id="wob_ws">(.*?)</span>',array, re.U) 
-        condition       = re.findall('<span class="vk_gy vk_sh" id="wob_dc">(.*?)</span></div></span>',array, re.U) 
+        condition       = re.findall('<div class="wob_dcp" id="wob_dcp"><span id="wob_dc">(.*?)</span></div></span>',array, re.U)
 
         condition       = '\n'.join(condition)
         temperature     = '\n'.join(temperature)
